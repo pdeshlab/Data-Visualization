@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+function setup() {
+	createCanvas(800,600); // make an HTML canvas element width x height pixels
+    }
 
-You can use the [editor on GitHub](https://github.com/pdeshlab/Data-Visualization/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+function draw() {
+	background(225);
+	var h = map(hour(), 0, 12, 0, 480);
+    var m = map(minute(), 0, 60, 0, 200);
+    var s = map(second(), 0, 60, 0, 50);
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+  //hour
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    strokeWeight(16);
+	stroke(255);
+	noFill();
+    rect(125,25,480,480)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+    strokeWeight(16);
+	stroke(255);
+	fill(255);
+   	rect(125,25,h,480)
 
-1. Numbered
-2. List
+    stroke(0)
+    strokeWeight(3)
+    line(165, 25, 165, 505)
+    line(205, 25, 205, 505)
+    line(245, 25, 245, 505)
+    line(285, 25, 285, 505)
+    line(325, 25, 325, 505)
+    line(365, 25, 365, 505)
+    line(405, 25, 405, 505)
+    line(445, 25, 445, 505)
+    line(485, 25, 485, 505)
+    line(525, 25, 525, 505)
+    line(565, 25, 565, 505)
 
-**Bold** and _Italic_ and `Code` text
+    //minute
+    strokeWeight(8)
+    stroke(255) //color: pink
+    fill(255);
+    rect(250, 150, 200, 200)
 
-[Link](url) and ![Image](src)
-```
+    strokeWeight(8)
+    stroke(255, 100, 150) //color: pink
+    noFill();
+    rect(250, 150, 200, 200)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pdeshlab/Data-Visualization/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+    strokeWeight(8)
+    stroke(255, 100, 150) //color: pink
+    fill(255, 100, 150);
+    rect(250, 150, m, 200)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    stroke(225)
+    strokeWeight(3)
+    line(300, 150, 300, 350)
+    line(350, 150, 350, 350)
+    line(400, 150, 400, 350)
+
+    //second
+
+    strokeWeight(4)
+    stroke(0)
+   	noFill();
+    rect(325,225,50, 50)
+
+
+    strokeWeight(4)
+    stroke(0)
+   	fill(0);
+    rect(325,225,s, 50)
+  //labels
+
+
+}
